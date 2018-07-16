@@ -13,14 +13,15 @@ class GaijinPotRetrievalService
     while listings_exist?
       listing_urls.each do |url|
         page = listing_page(url)
-        {
+        listing = GaijinPotListing.find_or_initialize_by(listing_id: url.split('/')[-1])
+        listing.update_attributes(
           url: url,
           title: title(page),
           description: description(page),
           date_posted: date_posted(page),
           image_url: image_url(page),
           tags: tags(page)
-        }
+        )
       end
       next_page
     end

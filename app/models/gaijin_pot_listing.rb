@@ -1,0 +1,2 @@
+class GaijinPotListing < Listing
+end
