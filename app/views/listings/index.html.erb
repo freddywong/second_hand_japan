@@ -9,7 +9,7 @@
             </figure>
           </div>
           <div class="media-content">
-            <p class="title is-4"><%= listing.title %></p>
+            <%= link_to(listing.title, listing.url, class: "title is-4") %>
             <p><%= "#{truncate(listing.description, length: 150)}..." %></p>
             <time><%= listing.date_posted %></time>
           </div>
