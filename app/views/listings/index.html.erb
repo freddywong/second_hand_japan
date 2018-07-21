@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="card">
+    <div class="card-content">
+      <% @listings.each do |listing| %>
+        <div class="media">
+          <div class="media-left">
+            <figure class="image">
+              <%= image_tag(listing.image_url, alt: 'listing-thumbnail-image', class: 'listing-thumbnail-image') %>
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4"><%= listing.title %></p>
+            <p><%= "#{truncate(listing.description, length: 150)}..." %></p>
+            <time><%= listing.date_posted %></time>
+          </div>
+        </div>   
+      <% end %>
+    </div>
+  </div>
+</div>

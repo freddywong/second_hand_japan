@@ -12,4 +12,12 @@
  *
  */
 
- @import "bulma";
+@import url('https://fonts.googleapis.com/css?family=Muli');
+@import "bulma";
+@import "home";
+@import "listings";
+
+
+* {
+  font-family: 'Muli', sans-serif;
+}
