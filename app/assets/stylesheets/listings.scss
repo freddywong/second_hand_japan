@@ -1,4 +1,13 @@
 .listing-thumbnail-image {
-    max-width: 100px;
-    max-height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.pagination-link.is-current {
+  background-color: $red;
+  border-color: $red;
+}
+
+.pagination-next a, .pagination-previous a {
+  color: $red;
 }

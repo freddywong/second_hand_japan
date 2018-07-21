@@ -5,7 +5,7 @@
         <div class="media">
           <div class="media-left">
             <figure class="image">
-              <%= image_tag(listing.image_url, alt: 'listing-thumbnail-image', class: 'listing-thumbnail-image') %>
+              <%= image_tag(thumbnail_url(listing), alt: 'listing-thumbnail-image', class: 'listing-thumbnail-image') %>
             </figure>
           </div>
           <div class="media-content">
@@ -17,4 +17,5 @@
       <% end %>
     </div>
   </div>
+  <%= will_paginate @listings, renderer: BulmaPagination::Rails %>
 </div>
